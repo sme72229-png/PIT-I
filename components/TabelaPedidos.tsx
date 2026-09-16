@@ -39,7 +39,7 @@ export default function TabelaPedidos({ pedidos }: { pedidos: PedidoComLojista[]
         <tbody className="divide-y divide-gray-200">
           {pedidos.map((pedido) => (
             // hover marca a linha inteira (complementar, nunca informativo sozinho)
-            <tr key={pedido.id_pedido} className="hover:bg-gray-50">
+            <tr key={pedido.id_pedido} className="text-gray-100 hover:bg-yellow-50 hover:text-gray-900">
               <td className="px-4 py-3 font-medium">#{pedido.id_pedido}</td>
               <td className="px-4 py-3">{pedido.tb_lojistas?.razao_social ?? '—'}</td>
               {/* moeda/data nunca quebram linha na coluna (nowrap) */}
