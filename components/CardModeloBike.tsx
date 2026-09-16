@@ -26,8 +26,10 @@ export default function CardModeloBike({ modelo, quantidade, aoAlterarQuantidade
 
   return (
     <article
-      className={`rounded-xl border p-4 transition-colors ${
-        selecionado ? 'border-yellow-400 bg-yellow-50' : 'border-gray-200 bg-white'
+      className={`rounded-xl border p-4 text-gray-900 transition-colors ${
+        selecionado
+          ? 'border-yellow-400 bg-yellow-50 hover:border-yellow-500 hover:bg-yellow-100'
+          : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
       }`}
     >
       <h3 className="font-semibold">{modelo.modelo}</h3>
@@ -64,7 +66,7 @@ export default function CardModeloBike({ modelo, quantidade, aoAlterarQuantidade
             const bruto = evento.target.valueAsNumber
             aoAlterarQuantidade(sanitizarQuantidade(Number.isNaN(bruto) ? 0 : bruto))
           }}
-          className="mt-1 w-20 rounded-lg border border-gray-300 px-2 py-1.5 text-sm focus-visible:ring-2 focus-visible:ring-yellow-400"
+          className="mt-1 w-20 rounded-lg border border-gray-300 bg-white px-2 py-1.5 text-sm text-gray-900 focus-visible:ring-2 focus-visible:ring-yellow-400"
         />
       </div>
 

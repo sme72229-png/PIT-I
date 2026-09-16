@@ -33,7 +33,7 @@ export default function SeletorLojista({ lojistas, valor, aoAlterar, desabilitad
           if (!desabilitado) aoAlterar(evento.target.value)
         }}
         disabled={desabilitado}
-        className="mt-1 w-full max-w-md rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
+        className="mt-1 w-full max-w-md rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm text-gray-900 focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2"
       >
         {/* SEM disabled no placeholder: o reset pós-pedido volta para ''
             programaticamente — o usuário precisa poder reabrir a escolha */}
